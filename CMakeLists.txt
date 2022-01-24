@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.19)
-project(tokenServer)
+project(rtmp_sample)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -19,7 +19,7 @@ set(OPENSSL_LIB_FILE ${LIB_DIR}/ssleay32.lib ${LIB_DIR}/libeay32.lib)
 
 include_directories(${INCLUDE_DIR})
 
-add_executable(tokenServer main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC ${RTMP_LIB_FILE}
         ${ZLIB_LIB_FILE}
